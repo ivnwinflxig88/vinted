@@ -1,0 +1,17 @@
+Vinted 四环境工具 · 在你的 Mac 上运行
+
+1. 保持 AdsPower 开启。在 API & MCP 中确认接口已启用并生成 API Key，保持安全校验开启。
+2. 双击同一文件夹里的「启动.command」。不要把它单独移出文件夹。
+3. 浏览器会打开中文管理页。在那里填写本机 API 端口、API Key，并选择 Vinted 站点。
+4. 点击「连接并检查环境」，然后点击「创建缺少的环境」。
+5. 按顺序打开 Vinted-01 至 Vinted-04，分别在浏览器中手动登录你列表里的前四个账户。
+6. 完成后点击「退出工具」。不要把 API Key 或完整本机会话地址发给别人。
+
+如果双击不能运行：打开 Mac「终端」，输入 bash 和一个空格，把「启动.command」拖进去，然后回车。
+如果缺少 Python：从 https://www.python.org/downloads/macos/ 安装 Python 3.9 或更新的 macOS universal2 版本。
+
+工具不会保存 Vinted 或邮箱密码。账户密码和验证码只在 Vinted 登录页输入。
+已有同名环境会保留原设置和登录状态，请自己确认对应账户。
+真实 AdsPower 连接需要在你的 Mac 上验证；本工具不保证账户不会受限制。
+
+详细说明见 README.md。

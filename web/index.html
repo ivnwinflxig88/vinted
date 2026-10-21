@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vinted · 本机环境管理</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<main>
+  <p class="eyebrow">MAC · ADSPOWER LOCAL API</p>
+  <h1>管理前 4 个环境</h1>
+  <p class="intro">在这台 Mac 上创建和打开 AdsPower 环境。Vinted 密码和验证码由你在浏览器中输入。</p>
+  <section>
+    <h2>1. 连接本机 AdsPower</h2>
+    <p>先打开 AdsPower → API &amp; MCP，确认接口已启用。端口和 API Key 在此页面填写。</p>
+    <form id="connection">
+      <div class="fields">
+        <label>API 端口<input id="port" type="number" min="1" max="65535" value="50325" required></label>
+        <label>Vinted 站点<select id="site">
+          <option value="global">通用入口 · vinted.com</option>
+          <option value="it">意大利 · vinted.it</option><option value="fr">法国 · vinted.fr</option>
+          <option value="de">德国 · vinted.de</option><option value="es">西班牙 · vinted.es</option>
+          <option value="uk">英国 · vinted.co.uk</option><option value="nl">荷兰 · vinted.nl</option>
+          <option value="be">比利时 · vinted.be</option><option value="pl">波兰 · vinted.pl</option>
+          <option value="pt">葡萄牙 · vinted.pt</option>
+        </select></label>
+      </div>
+      <label>API Key<input id="key" type="password" autocomplete="off" spellcheck="false" placeholder="只在本机使用，不会写入文件"></label>
+      <p class="hint">保持 AdsPower 的安全校验开启，并填写客户端生成的 Key。修改端口或站点后请重新连接。</p>
+      <button type="submit">连接并检查环境</button>
+    </form>
+  </section>
+  <section>
+    <h2>2. 一次创建，逐个登录</h2>
+    <p>同名环境会保留原设置和登录状态。请确认其中的账户，再决定如何使用。新环境使用本机网络与默认浏览器设置。</p>
+    <div class="actions">
+      <button id="create" disabled>创建缺少的环境</button>
+      <button id="refresh" class="secondary" disabled>重新检查</button>
+    </div>
+    <div id="profiles" class="profiles"></div>
+  </section>
+  <p id="message" role="status" aria-live="polite">等待连接。工具只管理 Vinted-01 至 Vinted-04，不会删除其他环境。</p>
+  <footer>
+    <p>API Key 仅保留在当前进程内存中。本工具不保证平台账户不会受限，请按平台规则使用。</p>
+    <button id="exit" class="secondary">退出工具</button>
+  </footer>
+</main>
+</body>
+</html>

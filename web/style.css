@@ -1,0 +1,29 @@
+:root { color-scheme: light; font: 16px/1.65 -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; color: #173a3b; background: #f3f6f5; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 1000px; margin: 0 auto; padding: 40px 24px; }
+.eyebrow { color: #43756d; letter-spacing: .13em; font-size: 12px; font-weight: 700; }
+h1 { font-size: clamp(28px, 5vw, 42px); letter-spacing: -.04em; margin: 8px 0; }
+h2 { font-size: 21px; margin: 0 0 10px; }
+h3 { margin: 0; font-size: 18px; }
+p { margin: 8px 0 18px; }
+.intro, section > p, footer, .hint { color: #526d69; }
+section { margin: 24px 0; padding: 26px; background: white; border: 1px solid #dbe6e1; border-radius: 18px; }
+.fields { display: grid; grid-template-columns: 1fr 2fr; gap: 18px; }
+label { display: block; margin: 12px 0; font-size: 14px; font-weight: 600; }
+input, select { width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #b7cec4; border-radius: 9px; background: white; font: inherit; color: inherit; }
+input:focus-visible, select:focus-visible, button:focus-visible { outline: 3px solid #87bfac; outline-offset: 2px; }
+button { border: 1px solid transparent; border-radius: 9px; padding: 12px 18px; background: #166c5e; color: white; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+button:hover:not(:disabled) { filter: brightness(.93); }
+button:disabled { opacity: .45; cursor: default; }
+.secondary { color: #245e51; border-color: #b9d2c8; background: #f5faf7; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.profiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
+article { padding: 20px; border: 1px solid #dbe6e1; border-radius: 12px; }
+article p { font-size: 14px; margin-bottom: 6px; }
+article small { display: block; color: #526d69; margin-bottom: 16px; overflow-wrap: anywhere; }
+.hint, footer { font-size: 13px; }
+#message { padding: 16px 20px; border-radius: 10px; background: #e5f1ea; overflow-wrap: anywhere; }
+#message.error { color: #873e27; background: #fff0e9; }
+footer { margin-top: 28px; }
+@media (max-width: 620px) { main { padding: 24px 14px; } section { padding: 20px; } .fields, .profiles { grid-template-columns: 1fr; } }
